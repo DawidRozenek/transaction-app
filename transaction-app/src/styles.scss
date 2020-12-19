@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+$color-primary: #fff;
+$color-secondary: #ee7033;
+
+$header-height: 80px;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
