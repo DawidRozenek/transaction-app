@@ -11,8 +11,6 @@
 
 .transactions__new {
   width: 29%;
-  height: 200px;
-  background: red;
 
   @media only screen and (max-width: $tablet) {
     width: 100%;
@@ -22,8 +20,6 @@
 
 .transactions__list {
   width: 69%;
-  height: 500px;
-  background: yellow;
 
   @media only screen and (max-width: $tablet) {
     width: 100%;

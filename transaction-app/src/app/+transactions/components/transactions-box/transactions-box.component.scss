@@ -1,0 +1,7 @@
+@import 'styles';
+
+:host {
+  display: block;
+  border-radius: 4px;
+  background: $color-primary;
+}

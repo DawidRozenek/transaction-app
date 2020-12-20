@@ -1,0 +1,9 @@
+<div
+  class="transactions-box-header"
+  [ngClass]="{ 'transactions-box-header--small': small }"
+>
+  <img class="transactions-box-header__icon" [src]="'/assets/' + iconName" />
+  <div class="transactions-box-header__title">
+    <ng-content></ng-content>
+  </div>
+</div>

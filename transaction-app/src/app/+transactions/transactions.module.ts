@@ -4,12 +4,16 @@ import { TransactionsComponent } from './containers/transactions/transactions.co
 import { TransactionsRoutingModule } from './transactions-routing.module';
 import { TransactionsListComponent } from './components/transactions-list/transactions-list.component';
 import { TransactionsNewComponent } from './components/transactions-new/transactions-new.component';
+import { TransactionsBoxHeaderComponent } from './components/transactions-box-header/transactions-box-header.component';
+import { TransactionsBoxComponent } from './components/transactions-box/transactions-box.component';
 
 @NgModule({
   declarations: [
     TransactionsComponent,
     TransactionsListComponent,
-    TransactionsNewComponent
+    TransactionsNewComponent,
+    TransactionsBoxHeaderComponent,
+    TransactionsBoxComponent
   ],
   imports: [
     CommonModule,
