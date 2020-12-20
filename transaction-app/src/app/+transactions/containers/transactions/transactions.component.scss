@@ -1,0 +1,31 @@
+@import 'styles';
+
+.transactions {
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: $tablet) {
+    flex-direction: column;
+  }
+}
+
+.transactions__new {
+  width: 29%;
+  height: 200px;
+  background: red;
+
+  @media only screen and (max-width: $tablet) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.transactions__list {
+  width: 69%;
+  height: 500px;
+  background: yellow;
+
+  @media only screen and (max-width: $tablet) {
+    width: 100%;
+  }
+}
