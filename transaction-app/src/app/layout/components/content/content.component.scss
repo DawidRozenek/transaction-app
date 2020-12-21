@@ -2,8 +2,8 @@
 
 :host {
   display: block;
-  width: 100vw;
-  height: calc(100vh - #{$header-height});
+  max-width: 100vw;
+  min-height: calc(100vh - #{$header-height});
   margin-top: $header-height;
   background-image: url("/assets/background.jpg");
   background-position: center;
@@ -15,4 +15,12 @@
   width: 100%;
   height: 100%;
   padding: $header-height 100px;
+
+  @media only screen and (max-width: $mobile) {
+    padding: $header-height 40px;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    padding: $header-height 10px;
+  }
 }

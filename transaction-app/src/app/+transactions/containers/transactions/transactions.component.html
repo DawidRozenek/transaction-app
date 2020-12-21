@@ -4,6 +4,9 @@
   </div>
 
   <div class="transactions__list">
-    <app-transactions-list></app-transactions-list>
+    <app-transactions-list
+      [transactions]="filteredTransactions"
+      [filters]="filters"
+    ></app-transactions-list>
   </div>
 </div>

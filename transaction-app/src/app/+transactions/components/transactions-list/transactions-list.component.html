@@ -5,5 +5,16 @@
     Recent transactions
   </app-transactions-box-header>
 
-  <p>transactions-list works!</p>
+  <app-transactions-list-filters
+    [filters]="filters"
+  >
+  </app-transactions-list-filters>
+
+  <ul class="transaction-list">
+    <li
+      class="transaction-list__item"
+      *ngFor="let transaction of transactions">
+      <app-transactions-list-item [transaction]="transaction"></app-transactions-list-item>
+    </li>
+  </ul>
 </app-transactions-box>
