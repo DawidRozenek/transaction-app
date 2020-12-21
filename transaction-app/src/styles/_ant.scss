@@ -1,0 +1,58 @@
+:root {
+  --grey: #6a6a6a;
+  --white: #fff;
+  --blue: #0c8397;
+}
+
+.mat-form-field {
+  width: 250px;
+}
+
+.mat-input-element {
+  color: var(--grey) !important;
+}
+
+.mat-button-toggle-label-content {
+  line-height: 30px !important;
+  color: var(--grey);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.mat-radio-label {
+  color: var(--grey);
+}
+
+.mat-radio-group .mat-radio-button {
+  margin-right: 20px;
+  font-size: 14px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.mat-icon {
+  color: var(--grey);
+}
+
+.mat-radio-inner-circle {
+  background-color: var(--blue) !important;
+}
+
+.mat-radio-outer-circle {
+  border-color: var(--blue) !important;
+}
+
+.mat-button-toggle-checked .mat-button-toggle-label-content {
+  color: var(--white);
+  background: var(--blue);
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: var(--blue);
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: var(--blue);
+}

@@ -1,0 +1,18 @@
+@import 'styles';
+
+.transactions-list-filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px 0;
+
+  @media only screen and (max-width: $tablet) {
+    flex-direction: column;
+    justify-content: unset;
+    align-items: flex-start;
+  }
+}
+
+.transactions-list-filters__sort {
+  margin-right: 30px;
+}

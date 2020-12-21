@@ -1,0 +1,28 @@
+<div class="transactions-list-item">
+  <div
+    class="transactions-list-item__category-code"
+    [style.backgroundColor]="transaction.categoryCode"
+  ></div>
+
+  <div class="transactions-list-item__content">
+    <div class="transactions-list-item__left">
+      <p class="transactions-list-item__date">{{ transaction.dates.valueDate | datesPipe }}</p>
+
+      <img
+        class="transactions-list-item__logo"
+        [src]="getLogoUrl(transaction.merchant.name)"
+        alt="Logo not found"
+        onerror="this.onerror=null; this.src='/assets/briefcase.svg';"
+      />
+
+      <div class="transactions-list-item__basic-info">
+        <span class="transactions-list-item__name">{{ transaction.merchant.name }}</span>
+        <p class="transactions-list-item__transaction-type">{{ transaction.transaction.type }}</p>
+      </div>
+    </div>
+
+    <div class="transactions-list-item__transaction-amount">
+      -${{ transaction.transaction.amountCurrency.amount }}
+    </div>
+  </div>
+</div>

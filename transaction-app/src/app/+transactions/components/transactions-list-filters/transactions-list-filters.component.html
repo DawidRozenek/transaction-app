@@ -1,0 +1,40 @@
+<div class="transactions-list-filters" [formGroup]="filters">
+  <mat-form-field class="transactions-list-filters__search">
+    <input
+      matInput
+      formControlName="search"
+      placeholder="Search..."
+      autocomplete="off"
+    >
+    <button
+      *ngIf="searchControl.value.length"
+      mat-button
+      mat-icon-button
+      matSuffix
+      (click)="clearSearch()"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <div>
+    <mat-button-toggle-group
+      class="transactions-list-filters__sort"
+      name="sortProperty"
+      [value]="sortProperty.date"
+      (change)="onSortPropertyChange($event)"
+    >
+      <mat-button-toggle [value]="sortProperty.date">Date</mat-button-toggle>
+      <mat-button-toggle [value]="sortProperty.beneficiary">Beneficiary</mat-button-toggle>
+      <mat-button-toggle [value]="sortProperty.amount">Amount</mat-button-toggle>
+    </mat-button-toggle-group>
+
+    <mat-radio-group
+      formControlName="sortOrder"
+      [value]="sortOrder.desc"
+    >
+      <mat-radio-button [value]="sortOrder.desc">Descending</mat-radio-button>
+      <mat-radio-button [value]="sortOrder.asc">Ascending</mat-radio-button>
+    </mat-radio-group>
+  </div>
+</div>

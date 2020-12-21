@@ -1,0 +1,61 @@
+@import 'styles';
+
+.transactions-list-item {
+  height: 60px;
+  color: $color-font-grey;
+
+  @media only screen and (max-width: $mobile) {
+    line-height: 1;
+  }
+}
+
+.transactions-list-item,
+.transactions-list-item__content,
+.transactions-list-item__left {
+  display: flex;
+  align-items: center;
+}
+
+.transactions-list-item__content {
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.transactions-list-item__category-code {
+  width: 5px;
+  height: 100%;
+}
+
+.transactions-list-item__logo {
+  width: 40px;
+  height: 40px;
+  margin: 0 30px 0 40px;
+
+  @media only screen and (max-width: $mobile) {
+    width: 30px;
+    height: 30px;
+    margin: 0 15px 0 20px;
+  }
+}
+
+.transactions-list-item__name {
+  font-weight: 500;
+}
+
+.transactions-list-item__transaction-amount,
+.transactions-list-item__name {
+  @media only screen and (max-width: $mobile) {
+    font-size: 14px;
+  }
+}
+
+.transactions-list-item__transaction-amount {
+  font-weight: 700;
+  color: darken($color-font-grey, 10%);
+}
+
+.transactions-list-item__transaction-type,
+.transactions-list-item__date {
+  font-size: 14px;
+}
