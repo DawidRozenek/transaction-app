@@ -27,3 +27,28 @@ export enum SortOrder {
   asc = 'asc',
   desc = 'desc',
 }
+
+export const newTransactionMock: Transaction = {
+  categoryCode: '#c12020',
+  dates: {
+    valueDate: 1,
+  },
+  merchant: {
+    name: '',
+    accountNumber: 'SI64397745065188824'
+  },
+  transaction: {
+    amountCurrency: {
+      amount: '',
+      currencyCode: 'EUR',
+    },
+    creditDebitIndicator: 'DBIT',
+    type: 'Online Transfer'
+  },
+};
+
+export const defaultFilters = {
+  search: '',
+  sortProperty: SortProperty.date,
+  sortOrder: SortOrder.desc,
+};

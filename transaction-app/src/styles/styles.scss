@@ -55,10 +55,13 @@ $header-height: 80px;
 p, span {
   margin: 0;
   line-height: 1;
+  color: $color-font-grey;
 }
 
 ul {
   padding: 0;
+  list-style: none;
+  color: $color-font-grey;
 }
 
 body {
@@ -70,3 +73,16 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 14px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-size: 14px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-size: 14px;
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-size: 14px;
+}

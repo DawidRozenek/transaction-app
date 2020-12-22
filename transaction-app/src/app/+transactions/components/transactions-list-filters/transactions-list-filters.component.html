@@ -21,7 +21,7 @@
     <mat-button-toggle-group
       class="transactions-list-filters__sort"
       name="sortProperty"
-      [value]="sortProperty.date"
+      [value]="filters.get('sortProperty').value"
       (change)="onSortPropertyChange($event)"
     >
       <mat-button-toggle [value]="sortProperty.date">Date</mat-button-toggle>
@@ -31,7 +31,7 @@
 
     <mat-radio-group
       formControlName="sortOrder"
-      [value]="sortOrder.desc"
+      [value]="filters.get('sortOrder').value"
     >
       <mat-radio-button [value]="sortOrder.desc">Descending</mat-radio-button>
       <mat-radio-button [value]="sortOrder.asc">Ascending</mat-radio-button>

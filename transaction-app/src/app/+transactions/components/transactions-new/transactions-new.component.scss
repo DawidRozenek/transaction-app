@@ -1,0 +1,41 @@
+@import 'styles';
+
+.transactions-new__form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px 20px 30px;
+}
+
+.transactions-new__submit {
+  align-self: flex-end;
+  margin-top: 20px;
+  background: $color-orange;
+  color: $color-white;
+  border: none;
+  padding: 10px 40px;
+  font-size: 14px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:disabled,
+  &[disabled] {
+    background: rgba(0,0,0, .12);
+    color: rgba(0,0,0, .26);
+    font-weight: 700;
+  }
+}
+
+.transactions-new__form ::ng-deep .mat-form-field {
+  width: 100% !important;
+}
+
+.transactions-new__preview-header {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.transactions-new__preview-keys {
+  font-weight: 500;
+}
