@@ -76,6 +76,10 @@ export class TransactionsComponent implements OnInit {
     this.accountMoney -= +formValue.amount;
 
     this.newTransactionForm
+      .get('amount')
+      .setValidators(this.transactionFormFactory.moneyLimit(this.accountMoney));
+
+    this.newTransactionForm
       .get('fromAccount')
       .setValue(this.transactionFormFactory.getFromAccountValue(this.accountMoney));
   }

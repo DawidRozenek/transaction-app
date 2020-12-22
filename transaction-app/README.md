@@ -37,6 +37,8 @@ TransactionModule components are separated to two folders: components and contai
 
 Forms are build with Model Driven Forms(ReactiveForms).
 
+RWD is Desktop first.
+
 ## Bonus tasks
 
 I didn't wanted to spend more time on that Assignment so I skip few of 'em.
