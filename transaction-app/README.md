@@ -25,3 +25,24 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## Application structure
+
+Application has few main modules.
+LayoutModule is a module which contains main layout components such as header or content
+TransactionModule which is lazy loaded module(folder is indicated with '+'). I know that it will not bring any value in this case because there is only one translation module, but I wanted to show a good practise to use with a bit larger apps.
+
+TransactionModule components are separated to two folders: components and containers. Components are kind of presentional components, Containers are smart ones, providing data to presentional.
+
+Forms are build with Model Driven Forms(ReactiveForms).
+
+## Bonus tasks
+
+I didn't wanted to spend more time on that Assignment so I skip few of 'em.
+
+i18n - It's quite easy to implement with i18n library and TranslateService(ngx-translate).
+
+Tests coverage - I didn't write unit tests because I didn't have time for that. If I could have some more time I would write tests for sorting and filtering/searching mainly, because it can be quite edgy and for posting transaction.
+Unfortunately I was also on vacation and I spent too less time on that Assignment and wanted to send it to you before Xmas.
+Hope u will find out everything u need from what I send. Best :)
