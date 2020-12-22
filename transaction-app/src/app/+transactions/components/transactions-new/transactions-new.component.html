@@ -6,5 +6,85 @@
     Make a transfer
   </app-transactions-box-header>
 
-  <p>transactions-new works!</p>
+  {{ accountMoney }}
+  <form
+    class="transactions-new__form"
+    [formGroup]="form"
+    #f="ngForm"
+  >
+    <ng-container *ngIf="!isPreview">
+      <mat-form-field>
+        <mat-label>From Account</mat-label>
+        <input
+          formControlName="fromAccount"
+          matInput
+          disabled
+          [placeholder]="accountMoney"
+          autocomplete="off"
+        >
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>To Account</mat-label>
+        <input
+          formControlName="toAccount"
+          matInput
+          placeholder="Type an account..."
+          autocomplete="off"
+        >
+        <mat-error *ngIf="amountControl.errors && amountControl.errors.required">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Amount</mat-label>
+        <input
+          id=""
+          type="number"
+          formControlName="amount"
+          matInput
+          placeholder="0.00"
+          autocomplete="off"
+        >
+        <span matPrefix>$&nbsp;</span>
+        <mat-error *ngIf="amountControl.errors && amountControl.errors.moneyLimit">
+          Cannot proceed with this transaction. Account balance will be below -500$
+        </mat-error>
+        <mat-error *ngIf="amountControl.errors && amountControl.errors.required">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+
+      <button
+        class="transactions-new__submit"
+        [disabled]="form.invalid"
+        (click)="onPreview()"
+      >
+        Submit
+      </button>
+    </ng-container>
+
+    <ng-container *ngIf="isPreview">
+      <p class="transactions-new__preview-header">Summary:</p>
+      <ul>
+        <li>
+            <span class="transactions-new__preview-keys">To Account: </span>
+            {{ form.get('toAccount').value }}
+        </li>
+        <li>
+          <span class="transactions-new__preview-keys">Amount: </span>
+          ${{ form.get('amount').value }}
+        </li>
+      </ul>
+
+      <button
+        class="transactions-new__submit"
+        [disabled]="form.invalid"
+        (click)="onSubmit()"
+      >
+        Transfer
+      </button>
+    </ng-container>
+  </form>
 </app-transactions-box>

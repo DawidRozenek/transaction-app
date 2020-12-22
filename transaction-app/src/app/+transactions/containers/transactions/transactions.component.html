@@ -1,6 +1,11 @@
 <div class="transactions">
   <div class="transactions__new">
-    <app-transactions-new></app-transactions-new>
+    <app-transactions-new
+      [form]="newTransactionForm"
+      [accountMoney]="accountMoney"
+      (submit)="onSubmit($event)"
+    >
+    </app-transactions-new>
   </div>
 
   <div class="transactions__list">

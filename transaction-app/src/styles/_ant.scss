@@ -53,6 +53,17 @@
   color: var(--blue);
 }
 
+.mat-form-field-label {
+  font-size: 14px;
+}
+
 .mat-form-field.mat-focused .mat-form-field-ripple {
   background-color: var(--blue);
+}
+
+.mat-form-field-prefix {
+  margin-left: -13px;
+  margin-right: 3px;
+  font-weight: 500;
+  color: var(--grey);
 }

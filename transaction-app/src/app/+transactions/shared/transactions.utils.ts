@@ -15,8 +15,8 @@ export const UnifyDates = (transactions: Transaction[]): Transaction[] => {
 
 export const sortAlphabetically = (a: Transaction, b: Transaction, order: SortOrder, property: SortProperty) => {
   return order === SortOrder.desc
-    ?  get(a, property) > get(b, property) ? -1 : 1
-    : get(b, property) > get(a, property) ? -1 : 1;
+    ?  get(a, property).toLowerCase() > get(b, property).toLowerCase() ? -1 : 1
+    : get(b, property).toLowerCase() > get(a, property).toLowerCase() ? -1 : 1;
 }
 
 export const sortNumbers = (a: Transaction, b: Transaction, order: SortOrder, property: SortProperty) => {

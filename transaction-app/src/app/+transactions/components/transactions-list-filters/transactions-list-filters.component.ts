@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { MatButtonToggleChange } from '@angular/material/button-toggle';
 import { SortProperty, SortOrder } from '../../shared/transactions.model';
@@ -8,7 +8,7 @@ import { SortProperty, SortOrder } from '../../shared/transactions.model';
   templateUrl: './transactions-list-filters.component.html',
   styleUrls: ['./transactions-list-filters.component.scss']
 })
-export class TransactionsListFiltersComponent implements OnInit {
+export class TransactionsListFiltersComponent {
   @Input() filters: FormGroup;
 
   sortProperty = SortProperty;
@@ -16,11 +16,6 @@ export class TransactionsListFiltersComponent implements OnInit {
 
   get searchControl(): FormControl {
     return this.filters.get('search') as FormControl;
-  }
-
-  constructor() { }
-
-  ngOnInit(): void {
   }
 
   clearSearch(): void {
